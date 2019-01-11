@@ -9,3 +9,4 @@ cache_*.js
 screen_*.png
 
 dump.rdb
+.DS_Store

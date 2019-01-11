@@ -46,19 +46,19 @@ https://www.youtube.com/watch?v=CbfLRCV7oeU&t=8s
 
 - 1.install nodejs and then npm install anyproxy and redis in weixin_crawler/proxy
 ```
-cd to weixin_crawler/proxy  
-run node proxy.js
+cd proxy  
+node proxy.js
 ```
 - 3.install anyproxy https CA in both computer and phone side【在电脑和手机上安装https ca】
     - 【Note】:if you are not sure how to use anyproxy, [here ](https://github.com/alibaba/anyproxy)is the doc
 
 #### Install the needed python packages 【安装python依赖】
 
-1. **NOTE**: you may can not simply type pip install -r requirements.txt to install every package【不能简单的通过`pip install -r requirements.txt`n安装所有依赖】, twisted is one of them which is needed by scrapy【因为其中的某个被scrapy所依赖】. When you get some problems about installing python package(twisted for instance), [here](https://www.lfd.uci.edu/~gohlke/pythonlibs/) always have a solution——downlod the right version package to your drive and run $ pip install package_name
+1. **NOTE**: you may can not simply type pip install -r requirements.txt to install every package【不能简单的通过`pip install -r requirements.txt`安装所有依赖】, twisted is one of them which is needed by scrapy【因为其中的某个被scrapy所依赖】. When you get some problems about installing python package(twisted for instance), [here](https://www.lfd.uci.edu/~gohlke/pythonlibs/) always have a solution——downlod the right version package to your drive and run $ pip install package_name
 
 2. I am not sure if your python enviroment will throw other package not found error, just install any package that is needed【不确定你特定的环境中会否有其他错误，自行解决】
 
-#### Some source code have to be modified(maybe it is not reasonable) 【部分源码被修改过，可能不k合理】
+#### Some source code have to be modified(maybe it is not reasonable) 【部分源码被修改过，可能不合理】
 
 1. scrapy Python36\Lib\site-packages\scrapy\http\request\ \__init\__.py  
 --weixin_crawler\source_code\request\\__init\__.py
@@ -71,7 +71,7 @@ run node proxy.js
 
 1. Install adb and add it to your path(windows for example)【将adb添加到PATH中】
 
-2. install android emulator(NOX suggested) or plugin your phone and make sure you can operate them with abd from command line tools【安装m安卓模拟器，或者在手机上安装可以使用adb命令行操作的插件】
+2. install android emulator(NOX suggested) or plugin your phone and make sure you can operate them with abd from command line tools【安装安卓模拟器，或者在手机上安装可以使用adb命令行操作的插件】
 
 3. If mutiple phone are connected to your computer you have to find out their adb ports which will be used to add crawler【如果多个手机连接到你的电脑，需要指定要使用的adb端口】
 
@@ -86,8 +86,8 @@ Why could weixin_crawler work automatically? Here is the reason【为啥该爬�
 #### Run the main.py
 
 ```
-cd weixin_crawler/project/
-python(3) ./main.py
+cd project/
+python3 ./main.py
 ```
 
 Now open the browser and everything you want would be in localhost:5000【浏览器打开】.
@@ -157,3 +157,14 @@ weixin_crawler从2018年6月就开始利用业余时间开发（居然用了半�
 | 作者微信(备注请以wc开头)          | 加入知识星球                    | 打赏作者                    |
 | ----------------------- | ------------------------- | ----------------------- |
 | ![ ](readme_img/wq.jpg) | ![ ](readme_img/知识星球.png) | ![ ](readme_img/打赏.png) |
+
+>### 参考
+
+- 【elasticsearch】
+	- [Docker Official Images](https://hub.docker.com/_/elasticsearch)
+	- [Elasticsearch之docker安装(ik、pinyin)](https://blog.csdn.net/jinyidong/article/details/80475320)
+
+- 【anyproxy】
+	- [AnyProxy 4.0 doc](http://anyproxy.io/cn/)
+	- [代理HTTPS](http://anyproxy.io/cn/#%E4%BB%A3%E7%90%86https)
+	- [OSX系统信任CA证书](http://anyproxy.io/cn/#%E8%AF%81%E4%B9%A6%E9%85%8D%E7%BD%AE)
